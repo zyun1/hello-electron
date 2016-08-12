@@ -1,0 +1,41 @@
+{
+  "name": "hello-electron",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "tsc": "tsc -p .",
+    "prepackage": "npm run tsc",
+    "package": "electron-packager ./ --platform=win32,darwin --arch=all --out=./dist --asar --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyun1/hello-electron.git"
+  },
+  "keywords": [],
+  "author": "zyun1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyun1/hello-electron/issues"
+  },
+  "homepage": "https://github.com/zyun1/hello-electron#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "dtsm": "^1.1.0",
+    "electron-packager": "^7.5.1",
+    "electron-prebuilt": "^1.3.3",
+    "typescript": "^1.8.10"
+  },
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.5",
+    "@angular/compiler": "^2.0.0-rc.5",
+    "@angular/core": "^2.0.0-rc.5",
+    "@angular/platform-browser": "^2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.5",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.0-beta.6",
+    "systemjs": "^0.19.36",
+    "zone.js": "^0.6.12"
+  }
+}

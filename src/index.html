@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Electron</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- a. Web Components のライブラリーを読込  -->
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    
+    <!-- 1. ライブラリーの読込 -->
+    <!-- 古いブラウザー向けのポリフィル -->
+    <script src="../node_modules/core-js/client/shim.min.js"></script>
+    <script src="../node_modules/zone.js/dist/zone.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- b. Shadow DOM で動作させるための設定 -->
+    <script>
+        window.Polymer = window.Polymer || {};
+        window.Polymer.dom = 'shadow';
+    </script>
+
+    <!-- c. Polymer の UI コンポーネントをインポート -->
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+
+    <!-- 2. SystemJS の構成 -->
+    <script src="system-config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<!-- 3. 表示するアプリケーション -->
+<body fullbleed unresolved layout vertical>
+    <my-app>Loading...</my-app>
+</body>
+</html>
