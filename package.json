@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
+    "postinstall": "bower install && dtsm install",
     "start": "electron .",
     "tsc": "tsc -p .",
     "prepackage": "npm run tsc",
